@@ -3,166 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INH Group | Performance & Solutions</title>
+    <title>ISANH GLOBAL | Performance & Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 1. BARRE DE NAVIGATION (NAVBAR) -->
-    <header class="main-header">
-        <div class="logo">
-            <span class="logo-gold">ISANH</span> GLOBAL
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">ISANH <span class="gold-text">GLOBAL</span></div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#poles">Nos Pôles</a></li>
+                    <li><a href="#apropos">À Propos</a></li>
+                    <li><a href="#approche">Notre Approche</a></li>
+                    <li><a href="#pourquoi">Pourquoi Nous</a></li>
+                    <li><a href="#contact" class="nav-btn-contact">Nous Contacter</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="navbar">
-            <a href="#accueil" class="active">Accueil</a>
-            <a href="#apropos">À Propos</a>
-            <a href="#poles">Services</a>
-            <a href="#approche">Notre Approche</a>
-            <a href="#choisir">Pourquoi nous choisir</a>
-            <a href="#contact" class="btn-nav-contact">Nous Contacter</a>
-        </nav>
     </header>
 
-    <!-- 2. SECTION ACCUEIL (HERO SECTION) -->
-    <section id="accueil" class="hero-section" style="background: linear-gradient(rgba(13, 27, 42, 0.7), rgba(13, 27, 42, 0.8)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600') no-repeat center center/cover;">
-        <!-- NOTE DU PROF : Remplace plus tard l'URL Unsplash par ta photo de Manono -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Des solutions innovantes pour un <span class="text-gold">développement durable</span> et une performance organisationnelle.</h1>
-            <p class="hero-subtitle">ISANH GLOBAL accompagne les institutions publiques, les ONGs, les entreprises et les sociétés dans leurs projets de développement, de gouvernance et de croissance économique.</p>
+            <h1>Des solutions innovantes pour un <span class="gold-text">développement durable</span> et une performance organisationnelle.</h1>
+            <p class="hero-subtitle">ISANH GLOBAL Née d'une expérience de terrain approfondie, ISANH Global s'engage aux côtés de ses partenaires pour bâtir des résultats solides, mesurables et pérennes. des territoires, institutions et entreprises dans leurs projets de développement. Forte d'une expertise transversale, développement local, appui technico-administratif, formation, commerce et transformation digitale, elle propose des solutions concrètes, conformes aux standards internationaux, pour répondre aux enjeux actuels de gestion et de croissance durable.</p>
             <div class="hero-buttons">
-                <a href="#poles" class="btn btn-gold">Découvrir nos services →</a>
-                <a href="#contact" class="btn btn-outline">Nous contacter</a>
-            </div>
-        </div>
-
-        <!-- 3. BARRE DES CHIFFRES CLÉS (Intégrée au bas de la Hero Section) -->
-        <div class="stats-bar">
-            <div class="stat-item">
-                <span class="stat-number">0+</span>
-                <span class="stat-label">Projets Réalisés</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">0+</span>
-                <span class="stat-label">Partenaires</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">0</span>
-                <span class="stat-label">Pays d'Intervention</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">0+</span>
-                <span class="stat-label">Bénéficiaires Formés</span>
+                <a href="#poles" class="btn btn-gold">Découvrir nos services</a>
+                <a href="https://wa.me/243822303508" target="_blank" class="btn btn-outline">Nous contacter</a>
             </div>
         </div>
     </section>
 
-    <!-- 4. SECTION NOS DOMAINES D'EXPERTISE (5 PÔLES) -->
-    <section id="poles" class="expertise-section">
-        <h2 class="section-title">Nos Domaines d'Expertise</h2>
-        <div class="expertise-container">
-            
-            <!-- Pôle 1 : Développement Local -->
-            <div class="expertise-card">
-                <div class="icon">🏛️</div>
-                <h3>Développement Local</h3>
-                <p>Nous accompagnons les territoires et communautés vers un développement durable et inclusif.</p>
-                <a href="#contact" class="card-arrow">→</a>
+    <!-- 2. NOTRE ENGAGEMENT DE DÉPART (À la place des faux chiffres) -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <h3><i class="fa-solid fa-crosshairs"></i></h3>
+                <p><strong>1 Objectif Unique</strong><br>Votre performance</p>
             </div>
-
-            <!-- Pôle 2 : Solutions Technico-Administratives -->
-            <div class="expertise-card">
-                <div class="icon">📋</div>
-                <h3>Solutions Technico-Administratives</h3>
-                <p>Conseil, appui et assistance pour une gestion efficace, transparente et conforme aux standards.</p>
-                <a href="#contact" class="card-arrow">→</a>
+            <div class="stat-card">
+                <h3><i class="fa-solid fa-check-double"></i></h3>
+                <p><strong>100% Rigueur</strong><br>Méthodologie stricte</p>
             </div>
-
-            <!-- Pôle 3 : Formation -->
-            <div class="expertise-card">
-                <div class="icon">🎓</div>
-                <h3>Formation</h3>
-                <p>Renforcement des capacités à travers des programmes de formation adaptés aux besoins actuels.</p>
-                <a href="#contact" class="card-arrow">→</a>
+            <div class="stat-card">
+                <h3><i class="fa-solid fa-handshake"></i></h3>
+                <p><strong>Proximité</strong><br>Ancré à Manono</p>
             </div>
-
-            <!-- Pôle 4 : Commerce -->
-            <div class="expertise-card">
-                <div class="icon">🛒</div>
-                <h3>Commerce</h3>
-                <p>Des solutions commerciales innovantes pour connecter les marchés et créer de la valeur.</p>
-                <a href="#contact" class="card-arrow">→</a>
+            <div class="stat-card">
+                <h3><i class="fa-solid fa-arrow-up-right-dots"></i></h3>
+                <p><strong>Impact Durable</strong><br>Solutions sur mesure</p>
             </div>
-
-            <!-- Pôle 5 : Transformation Digitale -->
-            <div class="expertise-card">
-                <div class="icon">💻</div>
-                <h3>Transformation Digitale</h3>
-                <p>Intégration des technologies modernes pour optimiser vos processus et accélérer la croissance.</p>
-                <a href="#contact" class="card-arrow">→</a>
-            </div>
-
         </div>
     </section>
-    <!-- 4. SECTION CONTACT -->
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Contacter INH Group</h2>
-        
-        <div class="form-container">
-            <!-- Bloc Coordonnées Directes -->
-            <div class="contact-info-block">
-                <h3>Nos Coordonnées Directes</h3>
-                <p><strong>📞 Téléphones :</strong> 
-                    <a href="tel:+243822303508">+243 822 303 508</a> | 
-                    <a href="tel:+243802405343">+243 802 405 343</a> | 
-                    <a href="tel:+243993730946">+243 993 730 946</a>
-                </p>
-                <p><strong>✉️ E-mail :</strong> 
-                    <a href="mailto:agisaac.ng1@gmail.com">agisaac.ng1@gmail.com</a>
-                </p>
-                <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-                <h3 style="margin-bottom: 15px;">Ou envoyez-nous un message :</h3>
+
+    <section id="poles" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Nos Domaines d'Expertise</h2>
+            <div class="grid-3-columns">
+                <div class="card-expertise">
+                    <i class="fa-solid fa-city card-icon"></i>
+                    <h3>Développement Local</h3>
+                    <p>Nous accompagnons les territoires et communautés vers un développement durable et inclusif.</p>
+                </div>
+                <div class="card-expertise">
+                    <i class="fa-solid fa-file-invoice card-icon"></i>
+                    <h3>Solutions Technico-Administratives</h3>
+                    <p>Conseil, appui et assistance pour une gestion efficace, transparente et conforme aux standards.</p>
+                </div>
+                <div class="card-expertise">
+                    <i class="fa-solid fa-user-graduate card-icon"></i>
+                    <h3>Formation</h3>
+                    <p>Renforcement des capacités à travers des programmes de formation adaptés aux besoins actuels.</p>
+                </div>
+                <div class="card-expertise">
+                    <i class="fa-solid fa-cart-shopping card-icon"></i>
+                    <h3>Commerce</h3>
+                    <p>Des solutions commerciales innovantes pour connecter les marchés et créer de la valeur.</p>
+                </div>
+                <div class="card-expertise">
+                    <i class="fa-solid fa-laptop-code card-icon"></i>
+                    <h3>Transformation Digitale</h3>
+                    <p>Intégration des technologies modernes pour optimiser vos processus et performances.</p>
+                </div>
             </div>
-
-            <!-- Formulaire -->
-            <form action="#" method="POST">
-                
-                <div class="form-group">
-                    <label for="nom">Nom complet ou Organisation :</label>
-                    <input type="text" id="nom" name="nom" placeholder="Ex: Votre nom ou nom de votre ONG" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Adresse e-mail :</label>
-                    <input type="email" id="email" name="email" placeholder="Ex: votremail@exemple.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="telephone">Numéro de Téléphone :</label>
-                    <input type="tel" id="telephone" name="telephone" placeholder="Ex: +243..." required>
-                </div>
-
-                <div class="form-group">
-                    <label for="objet">Quel est l'objet de votre demande ?</label>
-                    <select id="objet" name="objet" required>
-                        <option value="">-- Choisissez une option --</option>
-                        <option value="advisory">Consultation ou Audit (INH Advisory)</option>
-                        <option value="trading">Achat de produits ou denrées (INH Trading)</option>
-                        <option value="services">Maintenance de véhicules (INH Services)</option>
-                        <option value="partenariat">Proposition de Partenariat / Autre</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Votre Message :</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin en quelques lignes..." required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">✉️ Envoyer la demande à INH Group</button>
-
-            </form>
         </div>
     </section>
-    <script src="script.js"></script>
+
+    <section id="apropos" class="section-padding">
+        <div class="container grid-2-columns">
+            <div class="about-text">
+                <span class="section-subtitle">À PROPOS DE NOUS</span>
+                <h2>Une expertise au service de <span class="gold-text">l'impact</span></h2>
+                <p><strong>Mon parcours & Vision :</strong> Diplômé en gestion des institutions de santé, j'ai passé cinq années au cœur de projets humanitaires et administratifs, où j'ai observé les leviers réels du développement durable. Animé par un esprit entrepreneurial, j'ai choisi de transformer cette expérience de terrain en action : ISANH Global est née pour offrir aux territoires et institutions une expertise complète — développement local, gestion technico-administrative, formation, commerce et transformation digitale — au service de résultats durables.</p>
+                <p><strong>Nos valeurs :</strong> Rigueur :Une gestion transparente et conforme aux standards, à chaque étape de nos interventions.
+Proximité : Une écoute attentive des besoins réels des communautés et institutions que nous accompagnons.
+Innovation : L'intégration des outils et technologies modernes pour optimiser durablement la performance.
+Engagement : Une volonté constante de créer un impact concret et durable sur le terrain..</p>
+            </div>
+            <div class="about-image-box">
+                <img src="mon-profil.png" alt="Directeur ISANH GLOBAL" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="approche" class="section-padding bg-dark">
+        <div class="container">
+            <h2 class="section-title text-center text-white">Notre Approche Méthodologique</h2>
+            <div class="approche-timeline">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Diagnostic</h3>
+                    <p>Analyse approfondie de la situation et identification des besoins réels.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Planification</h3>
+                    <p>Conception de stratégies sur mesure et feuilles de route claires.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Mise en œuvre</h3>
+                    <p>Déploiement opérationnel avec rigueur technique et managériale.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Suivi & Évaluation</h3>
+                    <p>Mesure continue de l'impact et ajustements pour garantir l'excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pourquoi" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Pourquoi choisir ISANH Global ?</h2>
+            <div class="grid-3-columns">
+                <div class="why-card">
+                    <i class="fa-solid fa-award why-icon"></i>
+                    <h3>Expertise</h3>
+                    <p>Une équipe hautement qualifiée possédant une parfaite maîtrise des enjeux sectoriels.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fa-solid fa-shield-halved why-icon"></i>
+                    <h3>Intégrité</h3>
+                    <p>Une transparence totale et un respect strict de l'éthique professionnelle.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fa-solid fa-lightbulb why-icon"></i>
+                    <h3>Innovation</h3>
+                    <p>Des approches modernes et des outils technologiques pour devancer les défis.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fa-solid fa-bolt why-icon"></i>
+                    <h3>Réactivité</h3>
+                    <p>Une capacité d'adaptation et une exécution rapide pour répondre à vos urgences.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fa-solid fa-sliders why-icon"></i>
+                    <h3>Solutions sur mesure</h3>
+                    <p>Chaque organisation est unique, nos livrables s'adaptent précisément à vos réalités.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fa-solid fa-hands-holding-child why-icon"></i>
+                    <h3>Accompagnement</h3>
+                    <p>Nous restons à vos côtés à chaque étape pour pérenniser les résultats obtenus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Construisons ensemble des solutions durables</h2>
+            <a href="https://wa.me/243822303508?text=Je%20souhaite%20prendre%20rendez-vous" target="_blank" class="btn btn-gold">Prendre rendez-vous</a>
+        </div>
+    </section>
+
+    <footer id="contact" class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>ISANH GLOBAL</h3>
+                <p>Bâtissons ensemble un avenir durable et performant.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-phone"></i> +243 822 303 508</p>
+                <p><i class="fa-solid fa-envelope"></i> agisaac.ng1@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Manono, Tanganyika, RDC</p>
+            </div>
+            <div class="footer-social">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/243822303508" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ISANH GLOBAL. Tous droits réservés.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
