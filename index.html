@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INH Group | Performance & Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. BARRE DE NAVIGATION (NAVBAR) -->
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-gold">ISANH</span> GLOBAL
+        </div>
+        <nav class="navbar">
+            <a href="#accueil" class="active">Accueil</a>
+            <a href="#apropos">À Propos</a>
+            <a href="#poles">Services</a>
+            <a href="#approche">Notre Approche</a>
+            <a href="#choisir">Pourquoi nous choisir</a>
+            <a href="#contact" class="btn-nav-contact">Nous Contacter</a>
+        </nav>
+    </header>
+
+    <!-- 2. SECTION ACCUEIL (HERO SECTION) -->
+    <section id="accueil" class="hero-section" style="background: linear-gradient(rgba(13, 27, 42, 0.7), rgba(13, 27, 42, 0.8)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600') no-repeat center center/cover;">
+        <!-- NOTE DU PROF : Remplace plus tard l'URL Unsplash par ta photo de Manono -->
+        <div class="hero-content">
+            <h1>Des solutions innovantes pour un <span class="text-gold">développement durable</span> et une performance organisationnelle.</h1>
+            <p class="hero-subtitle">ISANH GLOBAL accompagne les institutions publiques, les ONGs, les entreprises et les sociétés dans leurs projets de développement, de gouvernance et de croissance économique.</p>
+            <div class="hero-buttons">
+                <a href="#poles" class="btn btn-gold">Découvrir nos services →</a>
+                <a href="#contact" class="btn btn-outline">Nous contacter</a>
+            </div>
+        </div>
+
+        <!-- 3. BARRE DES CHIFFRES CLÉS (Intégrée au bas de la Hero Section) -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">0+</span>
+                <span class="stat-label">Projets Réalisés</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">0+</span>
+                <span class="stat-label">Partenaires</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Pays d'Intervention</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">0+</span>
+                <span class="stat-label">Bénéficiaires Formés</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION NOS DOMAINES D'EXPERTISE (5 PÔLES) -->
+    <section id="poles" class="expertise-section">
+        <h2 class="section-title">Nos Domaines d'Expertise</h2>
+        <div class="expertise-container">
+            
+            <!-- Pôle 1 : Développement Local -->
+            <div class="expertise-card">
+                <div class="icon">🏛️</div>
+                <h3>Développement Local</h3>
+                <p>Nous accompagnons les territoires et communautés vers un développement durable et inclusif.</p>
+                <a href="#contact" class="card-arrow">→</a>
+            </div>
+
+            <!-- Pôle 2 : Solutions Technico-Administratives -->
+            <div class="expertise-card">
+                <div class="icon">📋</div>
+                <h3>Solutions Technico-Administratives</h3>
+                <p>Conseil, appui et assistance pour une gestion efficace, transparente et conforme aux standards.</p>
+                <a href="#contact" class="card-arrow">→</a>
+            </div>
+
+            <!-- Pôle 3 : Formation -->
+            <div class="expertise-card">
+                <div class="icon">🎓</div>
+                <h3>Formation</h3>
+                <p>Renforcement des capacités à travers des programmes de formation adaptés aux besoins actuels.</p>
+                <a href="#contact" class="card-arrow">→</a>
+            </div>
+
+            <!-- Pôle 4 : Commerce -->
+            <div class="expertise-card">
+                <div class="icon">🛒</div>
+                <h3>Commerce</h3>
+                <p>Des solutions commerciales innovantes pour connecter les marchés et créer de la valeur.</p>
+                <a href="#contact" class="card-arrow">→</a>
+            </div>
+
+            <!-- Pôle 5 : Transformation Digitale -->
+            <div class="expertise-card">
+                <div class="icon">💻</div>
+                <h3>Transformation Digitale</h3>
+                <p>Intégration des technologies modernes pour optimiser vos processus et accélérer la croissance.</p>
+                <a href="#contact" class="card-arrow">→</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- 4. SECTION CONTACT -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contacter INH Group</h2>
+        
+        <div class="form-container">
+            <!-- Bloc Coordonnées Directes -->
+            <div class="contact-info-block">
+                <h3>Nos Coordonnées Directes</h3>
+                <p><strong>📞 Téléphones :</strong> 
+                    <a href="tel:+243822303508">+243 822 303 508</a> | 
+                    <a href="tel:+243802405343">+243 802 405 343</a> | 
+                    <a href="tel:+243993730946">+243 993 730 946</a>
+                </p>
+                <p><strong>✉️ E-mail :</strong> 
+                    <a href="mailto:agisaac.ng1@gmail.com">agisaac.ng1@gmail.com</a>
+                </p>
+                <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+                <h3 style="margin-bottom: 15px;">Ou envoyez-nous un message :</h3>
+            </div>
+
+            <!-- Formulaire -->
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="nom">Nom complet ou Organisation :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex: Votre nom ou nom de votre ONG" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: votremail@exemple.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Numéro de Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Ex: +243..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="objet">Quel est l'objet de votre demande ?</label>
+                    <select id="objet" name="objet" required>
+                        <option value="">-- Choisissez une option --</option>
+                        <option value="advisory">Consultation ou Audit (INH Advisory)</option>
+                        <option value="trading">Achat de produits ou denrées (INH Trading)</option>
+                        <option value="services">Maintenance de véhicules (INH Services)</option>
+                        <option value="partenariat">Proposition de Partenariat / Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre Message :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin en quelques lignes..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">✉️ Envoyer la demande à INH Group</button>
+
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+/* CONFIGURATION GÉNÉRALE */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafbfd;
+    color: #2c3e50;
+}
+
+/* L'EN-TÊTE (MENU) */
+header {
+    background-color: #ffffff;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #0b3c5d;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+}
+
+/* SECTION BIENVENUE (HERO) */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0b3c5d 0%, #328cc1 100%);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 36px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    opacity: 0.9;
+}
+
+/* LE BOUTON ACCENTUÉ */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #d9b310;
+    color: #0b3c5d;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+/* SECTION DES CARTES */
+.services-section {
+    padding: 80px 20px;
+    background-color: #fafbfd;
+}
+
+.section-title {
+    text-align: center;
+    color: #0b3c5d;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    display: table;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+
+.card {
+    display: table-cell;
+    width: 33.33%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.card h3 {
+    color: #0b3c5d;
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.card h4 {
+    color: #d9b310;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+}.contact-info-block {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.contact-info-block h3 {
+    color: #0b3c5d;
+    margin-top: 0;
+}
+.contact-info-block p {
+    font-size: 15px;
+    color: #555;
+    margin: 8px 0;
+}
+.contact-info-block a {
+    color: #328cc1;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact-info-block a:hover {
+    text-decoration: underline;
+}/* DESIGN DES IMAGES DANS LES CARTES */
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Permet de centrer et recadrer proprement l'image */
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 15px;
+}
+
+/* Petite mise à jour pour que la carte accueille bien l'image */
+.card {
+    padding: 0 0 25px 0 !important; /* On enlève le padding du haut pour l'image */
+}
+
+.card h3, .card h4, .card p {
+    padding: 0 20px; /* On remet de l'espace sur les côtés pour les textes */
+}/* IMPORTS & BASICS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F2F4F7; /* Gris/Blanc très clair de fond */
+    color: #0D1B2A;
+}
+
+/* NAVBAR LUXE */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #0D1B2A;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.logo-gold { color: #D4A017; }
+.navbar a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.navbar a:hover, .navbar a.active { color: #D4A017; }
+.btn-nav-contact {
+    background-color: #D4A017;
+    color: #0D1B2A !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* HERO SECTION PRESTIGE */
+.hero-section {
+    position: relative;
+    padding: 120px 8% 180px 8%;
+    color: white;
+    text-align: left;
+}
+.hero-content { max-width: 800px; }
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.text-gold { color: #D4A017; }
+.hero-subtitle {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+.btn-gold { background-color: #D4A017; color: #0D1B2A; }
+.btn-gold:hover { background-color: #b88614; }
+.btn-outline { border: 2px solid white; color: white; }
+.btn-outline:hover { background-color: white; color: #0D1B2A; }
+
+/* BARRE DE STATISTIQUES INTEGRÉE */
+.stats-bar {
+    position: absolute;
+    bottom: -50px;
+    left: 8%;
+    right: 8%;
+    background-color: #0D1B2A;
+    border: 1px solid rgba(212, 160, 23, 0.3);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.stat-item { text-align: center; }
+.stat-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #D4A017;
+}
+.stat-label {
+    font-size: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* SECTION EXPERTISE / PÔLES */
+.expertise-section {
+    padding: 120px 8% 60px 8%;
+    text-align: center;
+}
+.section-title {
+    font-size: 28px;
+    margin-bottom: 50px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.expertise-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+.expertise-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    position: relative;
+}
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.expertise-card .icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.expertise-card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #0D1B2A;
+}
+.expertise-card p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.card-arrow {
+    text-decoration: none;
+    color: #0D1B2A;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.expertise-card:hover .card-arrow { color: #D4A017; }
