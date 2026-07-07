@@ -1,19 +1,19 @@
 backend:
   name: github
   repo: agisaacng1-alt/isanh-global
-  branch: Principaux
+  branch: main
 
-media_folder: "Images/Téléchargements"
+media_folder: "images/téléchargements"
 public_folder: "/images/téléchargements"
 
 collections:
-  - name: "Offres"
+  - name: "offres"
     label: "Nos Offres et Activités"
     folder: "Contenu/offres"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Titre de l'activity", name: "titre", widget: "string" }
+      - { label: "Titre de l'activité", name: "titre", widget: "string" }
       - { label: "Date de publication", name: "date", widget: "datetime" }
       - { label: "Image d'illustration", name: "image", widget: "image" }
       - { label: "Description de l'offre", name: "body", widget: "markdown" }
