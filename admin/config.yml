@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: agisaacng1-alt/isanh-global
+  name: git-gateway
   branch: main
 
 media_folder: "images/téléchargements"
