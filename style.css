@@ -101,8 +101,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* On appelle ici votre image locale 'manono.PNG' */
-    background: #0D1B2A url('manono.PNG') no-repeat center center/cover;
+    /* On appelle ici votre image locale 'manono.png' */
+    background: #0D1B2A url('manono.png') no-repeat center center/cover;
     background-attachment: fixed; /* Effet parallaxe élégant */
     color: #ffffff;
     padding: 0 20px;
@@ -382,4 +382,134 @@ body {
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.05);
     font-size: 0.85rem;
+}/* --- DESIGN DES NOUVEAUX POLES --- */
+.poles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
+
+.pole-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #D4A017; /* Rappel de votre couleur dorée */
+}
+
+.pole-card:hover {
+    transform: translateY(-5px);
+}
+
+.pole-icon {
+    font-size: 2.5rem;
+    color: #0D1B2A;
+    margin-bottom: 20px;
+}
+
+.pole-card h3 {
+    font-size: 1.4rem;
+    color: #0D1B2A;
+    margin-bottom: 15px;
+}
+
+.pole-card ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.pole-card ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.pole-card ul li::before {
+    content: "✓";
+    color: #D4A017;
+    position: absolute;
+    left: 0;
+}
+
+/* --- DESIGN DES BOUTONS DE PUBLICATION --- */
+.publication-buttons {
+    margin-bottom: 40px;
+}
+
+.btn-pub {
+    background: transparent;
+    border: 2px solid #0D1B2A;
+    color: #0D1B2A;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-pub:hover, .btn-pub.active {
+    background: #0D1B2A;
+    color: #ffffff;
+}
+/* --- GRILLE DES POLES UNIFORME --- */
+.poles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.pole-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #D4A017;
+    text-align: center;
+}
+
+.pole-card:hover {
+    transform: translateY(-5px);
+}
+
+.pole-icon {
+    font-size: 2.5rem;
+    color: #0D1B2A;
+    margin-bottom: 15px;
+}
+
+.pole-card h3 {
+    font-size: 1.3rem;
+    color: #0D1B2A;
+    margin-bottom: 15px;
+}
+
+.pole-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.pole-card ul li {
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.pole-card ul li::before {
+    content: "✓";
+    color: #D4A017;
+    position: absolute;
+    left: 0;
+}
+<a href="https://www.facebook.com/nomdevotrepereprise" target="_blank" rel="noopener noreferrer">Suivez-nous sur Facebook</a>
+
+<a href="https://www.linkedin.com/company/nomdevotreentreprise" target="_blank" rel="noopener noreferrer">Rejoignez-nous sur LinkedIn</a>
+
+<a href="https://wa.me/votrenumero" target="_blank" rel="noopener noreferrer">Discutez avec nous sur WhatsApp</a>

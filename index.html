@@ -58,37 +58,74 @@
             </div>
         </div>
     </section>
-
-    <section id="poles" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title">Nos Domaines d'Expertise</h2>
-            <div class="grid-3-columns">
-                <div class="card-expertise">
-                    <i class="fa-solid fa-city card-icon"></i>
-                    <h3>Développement Local</h3>
-                    <p>Nous accompagnons les territoires et communautés vers un développement durable et inclusif.</p>
-                </div>
-                <div class="card-expertise">
-                    <i class="fa-solid fa-file-invoice card-icon"></i>
-                    <h3>Solutions Technico-Administratives</h3>
-                    <p>Conseil, appui et assistance pour une gestion efficace, transparente et conforme aux standards.</p>
-                </div>
-                <div class="card-expertise">
-                    <i class="fa-solid fa-user-graduate card-icon"></i>
-                    <h3>Formation</h3>
-                    <p>Renforcement des capacités à travers des programmes de formation adaptés aux besoins actuels.</p>
-                </div>
-                <div class="card-expertise">
-                    <i class="fa-solid fa-cart-shopping card-icon"></i>
-                    <h3>Commerce</h3>
-                    <p>Des solutions commerciales innovantes pour connecter les marchés et créer de la valeur.</p>
-                </div>
-                <div class="card-expertise">
+<!-- SECTION NOS POLES -->
+<section id="poles" class="section-padding">
+    <div class="container">
+        <h2 class="section-title text-center">Nos Pôles d'Expertise</h2>
+        
+        <div class="poles-grid">
+            
+            <!-- Pôle Logistique -->
+            <div class="pole-card">
+                <div class="pole-icon"><i class="fas fa-truck-loading"></i></div>
+                <h3>Logistique Opérationnelle</h3>
+                <p>Solutions de gestion et maintenance pour optimiser vos ressources sur le terrain :</p>
+              <!-- Pôle Transformation Digitale -->  
+            </div>
+            <div class="card-expertise">
                     <i class="fa-solid fa-laptop-code card-icon"></i>
                     <h3>Transformation Digitale</h3>
                     <p>Intégration des technologies modernes pour optimiser vos processus et performances.</p>
                 </div>
+
+            <!-- Pôle Gestion des Données -->
+            <div class="pole-card">
+                <div class="pole-icon"><i class="fas fa-database"></i></div>
+                <h3>Gestion & Valorisation des Données</h3>
+                <p>Sécurisation et exploitation intelligente de vos informations stratégiques :</p>
+                
             </div>
+
+            <!-- Pôle Formation -->
+            <div class="pole-card">
+                <div class="pole-icon"><i class="fas fa-user-graduate"></i></div>
+                <h3>Formation</h3>
+                <p>Renforcement des capacités à travers des programmes de formation adaptés aux besoins actuels.</p>
+            </div>
+
+            <!-- Pôle Commerce -->
+            <div class="pole-card">
+                <div class="pole-icon"><i class="fas fa-shopping-cart"></i></div>
+                <h3>Commerce</h3>
+                <p>Des solutions commerciales innovantes pour connecter les marchés et créer de la valeur.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+<!-- SECTION PUBLICATIONS & OPPORTUNITÉS -->
+<section id="publications" class="section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Espace Publications & Opportunités</h2>
+        <p class="text-center section-subtitle">Suivez nos réalisations et découvrez nos appels à collaboration.</p>
+        
+        <!-- Filtres / Boutons de publication -->
+        <div class="publication-buttons text-center">
+            <button class="btn btn-pub active" onclick="filterPublications('all')">Tout voir</button>
+            <button class="btn btn-pub" onclick="filterPublications('activites')"><i class="fas fa-bullhorn"></i> Activités Réalisées</button>
+            <button class="btn btn-pub" onclick="filterPublications('offres')"><i class="fas fa-briefcase"></i> Offres & Recrutements</button>
+            <button class="btn btn-pub" onclick="filterPublications('projets')"><i class="fas fa-hand-holding-usd"></i> Projets à Financer</button>
+        </div>
+
+<!-- GRILLE DES PUBLICATIONS (VIDE - EN ATTENTE) -->
+<div class="publications-grid">
+    
+    <div class="no-publications text-center" style="grid-column: 1 / -1; padding: 40px; color: #666; width: 100%;">
+        <div style="font-size: 2.5rem; margin-bottom: 15px; color: #0D1B2A;"><i class="fas fa-folder-open"></i></div>
+        <p>Aucune publication pour le moment. Nos activités, offres et projets seront bientôt disponibles.</p>
+    </div>
+
         </div>
     </section>
 
@@ -104,7 +141,7 @@ Innovation : L'intégration des outils et technologies modernes pour optimiser d
 Engagement : Une volonté constante de créer un impact concret et durable sur le terrain..</p>
             </div>
             <div class="about-image-box">
-                <img src="mon-profil.PNG" alt="Directeur ISANH GLOBAL" class="about-img">
+                <img src="./mon-profil.png" alt="Directeur ISANH GLOBAL" class="about-img">
             </div>
         </div>
     </section>
@@ -198,8 +235,8 @@ Engagement : Une volonté constante de créer un impact concret et durable sur l
             <div class="footer-social">
                 <h4>Suivez-nous</h4>
                 <div class="social-icons">
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/https://www.facebook.com/profile.php?id=100064615036930" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/company/https://www.linkedin.com/groups/32700083" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://wa.me/243822303508" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
