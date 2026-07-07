@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: agisaacng1-alt/isanh-global
   branch: Principaux
 
 media_folder: "Images/Téléchargements"
@@ -12,7 +13,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Titre de l'activité", name: "titre", widget: "string" }
+      - { label: "Titre de l'activity", name: "titre", widget: "string" }
       - { label: "Date de publication", name: "date", widget: "datetime" }
       - { label: "Image d'illustration", name: "image", widget: "image" }
       - { label: "Description de l'offre", name: "body", widget: "markdown" }
