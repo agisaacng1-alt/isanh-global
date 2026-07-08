@@ -1,24 +1,30 @@
-console.log("Le script app.js est bien chargé !");
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM chargé !");
 
-document.addEventListener("DOMContentLoaded", () => {
-    const conteneur = document.getElementById('zone-publications');
-    
-    if (!conteneur) {
-        console.error("L'élément 'zone-publications' est introuvable dans votre HTML !");
-        return;
+    // 1. Gestion du formulaire (avec sécurité)
+    const form = document.querySelector(".contact-section form");
+    if (form) {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Merci ! Votre message a été pris en compte.");
+        });
+    } else {
+        console.warn("Le formulaire de contact n'est pas sur cette page.");
     }
 
-    const url = 'https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/refs/heads/main/content/ma-publication.md?nocache=' + new Date().getTime();
-
-    fetch(url)
-        .then(reponse => {
-            if (!reponse.ok) throw new Error('Erreur ' + reponse.status);
-            return reponse.text();
-        })
-        .then(texte => {
-            conteneur.innerHTML = `<h3>Publication</h3><p>${texte}</p>`;
-        })
-        .catch(err => {
-            conteneur.innerHTML = "Erreur : " + err.message;
-        });
+    // 2. Chargement des publications
+    const conteneur = document.getElementById('zone-publications');
+    if (conteneur) {
+        const url = 'https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/refs/heads/main/content/ma-publication.md';
+        
+        fetch(url)
+            .then(reponse => reponse.text())
+            .then(texte => {
+                conteneur.innerHTML = `<h3>Ma Publication</h3><p>${texte}</p>`;
+            })
+            .catch(err => {
+                conteneur.innerHTML = "Erreur de chargement.";
+                console.error(err);
+            });
+    }
 });
