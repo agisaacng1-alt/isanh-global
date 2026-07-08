@@ -1,14 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. Initialiser le formulaire de contact
-    const form = document.querySelector(".contact-section form");
-    if (form) {
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Merci ! Votre message a été pris en compte.");
-        });
-    }
-
-    // 2. Charger la publication spécifique
     chargerPublication();
 });
 
@@ -16,29 +6,27 @@ async function chargerPublication() {
     const conteneur = document.getElementById('zone-publications');
     if (!conteneur) return;
 
-    // Utilisation du chemin direct vers le fichier dans ton dépôt
-    // Remplace la ligne urlFichier actuelle par celle-ci :
-// Remplace la ligne urlFichier actuelle par celle-ci :
-const urlFichier = https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/refs/heads/main/content/ma-publication.md
+    // Utilisation du lien exact que tu m'as donné
+    const urlFichier = 'https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/refs/heads/main/content/ma-publication.md';
 
     try {
         const reponse = await fetch(urlFichier);
         
         if (!reponse.ok) {
-            throw new Error('Fichier non trouvé');
+            throw new Error('Erreur HTTP: ' + reponse.status);
         }
 
         const texte = await reponse.text();
         
-        // Affichage du contenu
+        // Affichage direct du contenu
         conteneur.innerHTML = `
             <div class="card">
-                <h3>Ma Publication</h3>
+                <h3>Publication</h3>
                 <p>${texte}</p>
             </div>
         `;
     } catch (erreur) {
-        console.error("Erreur :", erreur);
-        conteneur.innerHTML = "<p>Impossible de charger le contenu.</p>";
+        console.error("Erreur détectée :", erreur);
+        conteneur.innerHTML = "<p>Impossible de charger le contenu. Erreur : " + erreur.message + "</p>";
     }
 }
