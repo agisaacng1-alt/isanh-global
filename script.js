@@ -1,55 +1,38 @@
-// Attendre que toute la page soit chargée avant de démarrer
+// 1. Ton code existant (le formulaire de contact)
 document.addEventListener("DOMContentLoaded", function() {
-    
-    // 1. Récupérer le formulaire dans le code HTML
     const form = document.querySelector(".contact-section form");
-    const selectObjet = document.getElementById("objet");
+    if (form) {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Merci ! Votre message a été pris en compte.");
+        });
+    }
 
-    // 2. Écouter le changement d'option dans le filtre intelligent (menu déroulant)
-    selectObjet.addEventListener("change", function() {
-        const optionChoisie = selectObjet.value;
-        console.log("L'utilisateur s'intéresse au pôle : " + optionChoisie);
-        // Ici, on pourra ajouter des questions spécifiques selon le pôle à l'avenir !
-    });
-
-    // 3. Intercepter l'envoi du formulaire quand l'utilisateur clique sur le bouton
-    form.addEventListener("submit", function(event) {
-        // Empêcher la page de se recharger brusquement
-        event.preventDefault();
-
-        // Récupérer les valeurs entrées par l'utilisateur
-        const nomClient = document.getElementById("nom").value;
-        const pôleSelectionne = selectObjet.options[selectObjet.selectedIndex].text;
-
-        // Afficher une alerte professionnelle de succès
-        alert("Merci " + nomClient + " !\n\nVotre demande concernant '" + pôleSelectionne + "' a bien été simulée.\n\nL'équipe d'ISANH GLOBAL vous recontactera sous 24h sur votre adresse e-mail ou par téléphone !");
-        
-        // Vider automatiquement les cases du formulaire après l'envoi
-        form.reset();
-    });
-});// Fonction pour charger et afficher les publications
-async function afficherPublications() {
-    const conteneur = document.getElementById('conteneur-publications');
-    // Remplace par le chemin réel de ton dossier de publications
-    const path = 'Contenu/Publications/'; 
-    
-    // Note : Pour un site statique hébergé sur GitHub, 
-    // tu devras peut-être lister tes fichiers ici si l'API GitHub est bloquée
-    // Exemple simple d'affichage :
-    conteneur.innerHTML = "<h3>Test d'affichage : Le script est actif !</h3>";
-}
-
-// Lancer la fonction au chargement de la page
-document.addEventListener("DOMContentLoaded", function() {
-    afficherPublications();
+    // 2. Ton nouveau code (pour afficher les publications)
+    chargerPublications();
 });
-// Cerveau : Va chercher les données et les affiche
-async function afficherPublications() {
+
+// La fonction pour afficher les publications
+async function chargerPublications() {
     const conteneur = document.getElementById('zone-publications');
-    // Le code qui va chercher tes fichiers .md ira ici plus tard
-    conteneur.innerHTML = "<h3>Test d'affichage : Le script est actif !</h3>";
-}
+    if (!conteneur) return; // Sécurité : on s'arrête si la zone n'existe pas
 
-document.addEventListener("DOMContentLoaded", function() {
-    afficherPublications();
-});
+    try {
+        // Liste des fichiers à afficher
+        const listeFichiers = ['ma-publication.md']; 
+        conteneur.innerHTML = ""; // On vide le message de chargement
+
+        for (const nomFichier of listeFichiers) {
+            const reponse = await fetch(`content/publications/${nomFichier}`);
+            const texte = await reponse.text();
+
+            const article = document.createElement('div');
+            article.className = "card";
+            article.innerHTML = `<h3>${nomFichier.replace('.md', '')}</h3><p>${texte}</p>`;
+            conteneur.appendChild(article);
+        }
+    } catch (erreur) {
+        console.error("Erreur de chargement :", erreur);
+        conteneur.innerHTML = "<p>Impossible de charger les publications.</p>";
+    }
+}
