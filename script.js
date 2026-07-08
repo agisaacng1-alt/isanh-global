@@ -27,4 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
         // Vider automatiquement les cases du formulaire après l'envoi
         form.reset();
     });
+});// Fonction pour charger et afficher les publications
+async function afficherPublications() {
+    const conteneur = document.getElementById('conteneur-publications');
+    // Remplace par le chemin réel de ton dossier de publications
+    const path = 'Contenu/Publications/'; 
+    
+    // Note : Pour un site statique hébergé sur GitHub, 
+    // tu devras peut-être lister tes fichiers ici si l'API GitHub est bloquée
+    // Exemple simple d'affichage :
+    conteneur.innerHTML = "<h3>Test d'affichage : Le script est actif !</h3>";
+}
+
+// Lancer la fonction au chargement de la page
+document.addEventListener("DOMContentLoaded", function() {
+    afficherPublications();
 });
