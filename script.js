@@ -22,7 +22,23 @@ async function chargerPublications() {
         const listeFichiers = ['ma-publication.md']; 
         conteneur.innerHTML = ""; // On vide le message de chargement
 
-        for (const nomFichier of listeFichiers) {
+for (const nomFichier of listeFichiers) {
+    // 1. On récupère la fiche technique du fichier via l'API GitHub
+    const reponse = await fetch(`https://api.github.com/repos/agisaacng1-alt/isanh-global/contents/content/publications/${nomFichier}`);
+    const donnees = await reponse.json();
+
+    // 2. On récupère le contenu réel via 'download_url'
+    const reponseContenu = await fetch(donnees.download_url);
+    const texte = await reponseContenu.text();
+
+    // 3. On crée la carte HTML avec le texte récupéré
+    const article = document.createElement('div');
+    article.className = "card";
+    article.innerHTML = `<h3>${nomFichier.replace('.md', '')}</h3><p>${texte}</p>`;
+    
+    // 4. On ajoute au conteneur
+    conteneur.appendChild(article);
+}
            // Remplace la ligne actuelle par celle-ci :
 // La fonction pour afficher les publications
 async function chargerPublications() {
