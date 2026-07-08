@@ -19,7 +19,7 @@ async function chargerPublication() {
     // Utilisation du chemin direct vers le fichier dans ton dépôt
     // Remplace la ligne urlFichier actuelle par celle-ci :
 // Remplace la ligne urlFichier actuelle par celle-ci :
-const urlFichier = 'https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/main/content/ma-publication.md';
+const urlFichier = https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/refs/heads/main/content/ma-publication.md
 
     try {
         const reponse = await fetch(urlFichier);
