@@ -23,7 +23,8 @@ async function chargerPublications() {
         conteneur.innerHTML = ""; // On vide le message de chargement
 
         for (const nomFichier of listeFichiers) {
-            const reponse = await fetch(`content/publications/${nomFichier}`);
+           // Remplace la ligne actuelle par celle-ci :
+const reponse = await fetch('./content/publications/' + nomFichier);
             const texte = await reponse.text();
 
             const article = document.createElement('div');
