@@ -24,7 +24,31 @@ async function chargerPublications() {
 
         for (const nomFichier of listeFichiers) {
            // Remplace la ligne actuelle par celle-ci :
-const reponse = await fetch('./content/publications/' + nomFichier);
+// La fonction pour afficher les publications
+async function chargerPublications() {
+    const conteneur = document.getElementById('zone-publications');
+    if (!conteneur) return; 
+
+    try {
+        const listeFichiers = ['ma-publication.md']; 
+        conteneur.innerHTML = ""; 
+
+        for (const nomFichier of listeFichiers) {
+            // C'EST ICI QUE TU REMPLACES LA LIGNE :
+            const reponse = await fetch(`https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/main/content/publications/${nomFichier}`);
+            
+            const texte = await reponse.text();
+
+            const article = document.createElement('div');
+            article.className = "card";
+            article.innerHTML = `<h3>${nomFichier.replace('.md', '')}</h3><p>${texte}</p>`;
+            conteneur.appendChild(article);
+        }
+    } catch (erreur) {
+        console.error("Erreur de chargement :", erreur);
+        conteneur.innerHTML = "<p>Impossible de charger les publications.</p>";
+    }
+}
             const texte = await reponse.text();
 
             const article = document.createElement('div');
