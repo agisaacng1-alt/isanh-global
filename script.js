@@ -35,7 +35,17 @@ async function chargerPublications() {
 
         for (const nomFichier of listeFichiers) {
             // C'EST ICI QUE TU REMPLACES LA LIGNE :
-            const reponse = await fetch(`https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/main/content/publications/${nomFichier}`);
+// ... à l'intérieur de ta boucle for ...
+const reponse = await fetch(`https://api.github.com/repos/agisaacng1-alt/isanh-global/contents/content/publications/${nomFichier}`);
+const donnees = await reponse.json(); // On récupère les infos du fichier
+
+// Maintenant, on va chercher le vrai contenu grâce au lien 'download_url'
+const reponseContenu = await fetch(donnees.download_url);
+const texte = await reponseContenu.text();
+
+// Et on affiche le texte
+const article = document.createElement('div');
+// ... reste de ton code ...
             
             const texte = await reponse.text();
 
