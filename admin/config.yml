@@ -6,13 +6,13 @@ media_folder: "images/téléchargements"
 public_folder: "/images/téléchargements"
 
 collections:
-  - name: "offres"
-    label: "Nos Offres et Activités"
-    folder: "Contenu/offres"
+  - name: "publications"
+    label: "Publications"
+    folder: "content/publications" # Dossier où sont enregistrés vos fichiers
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Titre de l'activité", name: "titre", widget: "string" }
-      - { label: "Date de publication", name: "date", widget: "datetime" }
-      - { label: "Image d'illustration", name: "image", widget: "image" }
-      - { label: "Description de l'offre", name: "body", widget: "markdown" }
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Catégorie", name: "category", widget: "select", options: ["Activités Réalisées", "Offres & Recrutements", "Projets à Financer"]}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Contenu", name: "body", widget: "markdown"}
