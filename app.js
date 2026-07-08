@@ -26,5 +26,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 conteneur.innerHTML = "Erreur de chargement.";
                 console.error(err);
             });
+        // On attend que la page soit totalement prête
+window.addEventListener("load", () => {
+    console.log("app.js est chargé");
+
+    const conteneur = document.getElementById('zone-publications');
+    
+    if (conteneur) {
+        fetch('https://raw.githubusercontent.com/agisaacng1-alt/isanh-global/refs/heads/main/content/ma-publication.md')
+            .then(res => res.text())
+            .then(data => {
+                conteneur.innerHTML = "<h3>Publication</h3><p>" + data + "</p>";
+            })
+            .catch(err => console.error("Erreur :", err));
+    }
+});
     }
 });
