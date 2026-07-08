@@ -43,3 +43,13 @@ async function afficherPublications() {
 document.addEventListener("DOMContentLoaded", function() {
     afficherPublications();
 });
+// Cerveau : Va chercher les données et les affiche
+async function afficherPublications() {
+    const conteneur = document.getElementById('zone-publications');
+    // Le code qui va chercher tes fichiers .md ira ici plus tard
+    conteneur.innerHTML = "<h3>Test d'affichage : Le script est actif !</h3>";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    afficherPublications();
+});
